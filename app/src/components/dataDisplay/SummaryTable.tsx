@@ -30,14 +30,16 @@ export function SummaryTable<T extends { city: string }>({
         <thead className="bg-gray-100">
           <tr>
             <th className="border border-gray-300 px-3 py-2">指標</th>
-            {data.map((item) => (
-              <th
-                key={item.city}
-                className="border border-gray-300 px-3 py-2 whitespace-nowrap"
-              >
-                {labelMap[item.city] ?? item.city}
-              </th>
-            ))}
+            {data
+              .filter((item) => labelMap[item.city])
+              .map((item) => (
+                <th
+                  key={item.city}
+                  className="border border-gray-300 px-3 py-2 whitespace-nowrap"
+                >
+                  {labelMap[item.city]}
+                </th>
+              ))}
           </tr>
         </thead>
         <tbody>
@@ -49,7 +51,9 @@ export function SummaryTable<T extends { city: string }>({
               <td className="border border-gray-300 px-3 py-2 font-medium">
                 {indicator.label}
               </td>
-              {data.map((item) => {
+              {data
+                .filter((item) => labelMap[item.city])
+                .map((item) => {
                 const rawValue = item[indicator.key];
                 const rendered = indicator.render
                   ? indicator.render(rawValue)

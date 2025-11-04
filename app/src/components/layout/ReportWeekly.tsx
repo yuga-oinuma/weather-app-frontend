@@ -67,6 +67,7 @@ const ReportWeekly: React.FC = () => {
       }
     };
     fetchSummary();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDate]);
 
   return (
