@@ -3,7 +3,7 @@ import DatePicker, { registerLocale } from "react-datepicker";
 import { ja } from "date-fns/locale/ja";
 import { FaCalendarAlt } from "react-icons/fa";
 import "react-datepicker/dist/react-datepicker.css";
-import { startOfWeek, format, subDays } from "date-fns";
+import { startOfWeek, format } from "date-fns";
 
 type DateSelectorProps = {
   selected: Date | null;
