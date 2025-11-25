@@ -100,45 +100,6 @@ const About: React.FC = () => {
             </a>
           </div>
         </div>
-
-        {/* 追加予定機能 */}
-        <div className="mt-12 px-4">
-          <h2 className="text-2xl font-bold mb-8 text-center">
-            次にやってみたいこと
-          </h2>
-          <ol className="relative border-l border-gray-300 max-w-md mx-auto">
-            <li className="mb-8 ml-6">
-              <span className="absolute -left-3 w-6 h-6 bg-blue-500 rounded-full"></span>
-              <h3 className="text-lg font-semibold">月次・年間レポート</h3>
-              <p className="text-gray-600 text-sm">
-                長期間のデータを比較・分析
-              </p>
-            </li>
-            <li className="mb-8 ml-6">
-              <span className="absolute -left-3 w-6 h-6 bg-green-500 rounded-full"></span>
-              <h3 className="text-lg font-semibold">UI/UX改善</h3>
-              <p className="text-gray-600 text-sm">
-                レイアウト調整、スマホでの操作性改善
-              </p>
-            </li>
-            <li className="mb-8 ml-6">
-              <span className="absolute -left-3 w-6 h-6 bg-purple-500 rounded-full"></span>
-              <h3 className="text-lg font-semibold">ユーザー通知機能</h3>
-              <p className="text-gray-600 text-sm">レポートの通知・配信</p>
-            </li>
-            <li className="mb-8 ml-6">
-              <span className="absolute -left-3 w-6 h-6 bg-yellow-500 rounded-full"></span>
-              <h3 className="text-lg font-semibold">AIの活用</h3>
-              <p className="text-gray-600 text-sm">
-                AIによる気象予測・考察コメント
-              </p>
-            </li>
-            <li className="ml-6">
-              <span className="absolute -left-3 w-6 h-6 bg-pink-500 rounded-full"></span>
-              <h3 className="text-lg font-semibold">And more ...</h3>
-            </li>
-          </ol>
-        </div>
       </div>
     </PageSection>
   );
